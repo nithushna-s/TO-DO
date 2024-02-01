@@ -1,0 +1,67 @@
+/* styles.css */
+
+.todo-list {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgb(194, 117, 55), #309104, rgb(247, 236, 84));
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+  }
+  
+  .add-todo {
+    margin-bottom: 10px;
+    padding-left: 15%;
+  }
+  
+  h1 {
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f7d154;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-left: 15%;
+    margin-right: 2%;
+    width: 63%;
+    background-color: rgb(131, 129, 4);
+  }
+  
+  .todo-item span {
+    margin-right: 10px;
+    margin-left: 20%;
+  }
+  
+  input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #f7d154;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+  }
+  
+  button {
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #309104;
+    color: #fff;
+    margin-right: 10px; 
+ 
+
+  }
+  
+  button:hover {
+    background-color: #f7d154;
+  }
+  
