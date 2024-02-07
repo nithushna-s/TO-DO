@@ -11,7 +11,7 @@ const TodoList = () => {
 
   const fetchTodos = async () => {
     try {
-      const response = await fetch('http://localhost:3001/todos');
+      const response = await fetch('http://localhost:3003/todos');
       const data = await response.json();
       setTodos(data);
     } catch (error) {
@@ -25,7 +25,7 @@ const TodoList = () => {
 
   const handleAddTodo = async () => {
     try {
-      const response = await fetch('http://localhost:3001/todos', {
+      const response = await fetch('http://localhost:3003/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const TodoList = () => {
 
   const handleUpdateTodo = async (id, newText) => {
     try {
-      const response = await fetch(`http://localhost:3001/todos/${id}`, {
+      const response = await fetch(`http://localhost:3003/todos/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const TodoList = () => {
 
   const handleDeleteTodo = async (id) => {
     try {
-      await fetch(`http://localhost:3001/todos/${id}`, {
+      await fetch(`http://localhost:3003/todos/${id}`, {
         method: 'DELETE',
       });
 
