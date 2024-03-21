@@ -26,7 +26,7 @@ database.once('connected', () => {
 
 // Use the todoRoutes
 const todoRoutes = require('./routes/todoRoutes.js');
-app.use('/todos', todoRoutes);
+app.use('/.netlify/functions/server', todoRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
