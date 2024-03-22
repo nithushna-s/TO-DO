@@ -4,7 +4,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
+
+
+
 const app = express();
+app.get("/", (req, res) => { res.send("Express on Vercel"); }); 
 const PORT = process.env.PORT || 3002;
 
 app.use(cors());
@@ -22,12 +26,16 @@ database.on('error', (error) => {
 database.once('connected', () => {
     console.log('Database connected');
 });
-
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 // Use the todoRoutes
 const todoRoutes = require('./routes/todoRoutes.js');
-app.use('/.netlify/functions/server', todoRoutes);
+app.use('/todos', todoRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+

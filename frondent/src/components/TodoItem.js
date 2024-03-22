@@ -1,14 +1,11 @@
-// src/components/TodoItem.js
+
 import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faEdit, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const TodoItem = ({ todo, onDelete, onUpdate }) => {
   const [isEditing, setEditing] = useState(false);
   const [editedText, setEditedText] = useState(todo.text);
 
-  const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
 
   const handleUpdate = () => {
     setEditing(false);
@@ -16,7 +13,7 @@ const TodoItem = ({ todo, onDelete, onUpdate }) => {
   };
 
   return (
-    <animated.div style={fade} className="todo-item">
+    <div  className="todo-item">
       {isEditing ? (
         <>
           <input
@@ -25,21 +22,21 @@ const TodoItem = ({ todo, onDelete, onUpdate }) => {
             onChange={(e) => setEditedText(e.target.value)}
           />
           <button onClick={handleUpdate}>
-            <FontAwesomeIcon icon={faCheck} />
-          </button>
+            submit
+                     </button>
         </>
       ) : (
         <>
           <span>{todo.text}</span>
           <button onClick={() => setEditing(true)}>
-            <FontAwesomeIcon icon={faEdit} />
+            edite
           </button>
           <button onClick={() => onDelete(todo._id)}>
-            <FontAwesomeIcon icon={faTrash} />
+          Delete
           </button>
         </>
       )}
-    </animated.div>
+    </div>
   );
 };
 

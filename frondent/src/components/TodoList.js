@@ -1,13 +1,11 @@
-// src/components/TodoList.js
+
 import React, { useState, useEffect } from 'react';
-import { useSpring, animated } from 'react-spring';
 import TodoItem from './TodoItem';
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [newTodoText, setNewTodoText] = useState('');
 
-  const fade = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
 
   const fetchTodos = async () => {
     try {
@@ -75,7 +73,7 @@ const TodoList = () => {
   };
 
   return (
-    <animated.div style={fade}>
+    <div >
       <div className="todo-list">
         <h1>Todo List</h1>
         <div className="add-todo">
@@ -97,7 +95,7 @@ const TodoList = () => {
           </div>
         ))}
       </div>
-    </animated.div>
+    </div>
   );
 };
 

@@ -69,4 +69,6 @@
     background-color: gold;
     color: rgb(2, 9, 91);
   }
-  
+  i{
+    background-color: remove;
+  }
