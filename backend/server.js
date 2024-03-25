@@ -8,7 +8,6 @@ require('dotenv').config();
 
 
 const app = express();
-app.get("/", (req, res) => { res.send("Express on Vercel"); }); 
 const PORT = process.env.PORT || 3002;
 
 app.use(cors());
